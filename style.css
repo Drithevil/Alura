@@ -1,0 +1,173 @@
+/* ===== Resetando estilos padrão ===== */
+* {
+    margin: 0; /* Remove todas as margens externas dos elementos */
+    padding: 0; /* Remove todos os espaçamentos internos dos elementos */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura total */
+}
+
+/* ===== Cores e Variáveis ===== */
+:root {
+    --netflix-black: #141414; /* Cor de fundo preta da Netflix */
+    --netflix-red: #e50914; /* Cor vermelha característica da Netflix */
+    --netflix-light-gray: #f5f5f1; /* Cinza claro para textos */
+    --netflix-dark-gray: #564d4d; /* Cinza escuro para elementos secundários */
+    --transition: all 0.3s ease; /* Transição suave de 0.3 segundos para todas as propriedades */
+}
+
+/* ===== Body e Layout Geral ===== */
+body {
+    background-color: var(--netflix-black); /* Define o fundo preto da página */
+    color: var(--netflix-light-gray); /* Cor padrão do texto */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Pilha de fontes moderna */
+    font-size: 3.5vw; /* Tamanho da fonte responsivo baseado na largura da viewport */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
+}
+
+/* ===== Main ===== */
+main {
+    display: flex; /* Ativa o layout flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    justify-content: center; /* Centraliza verticalmente os itens */
+    min-height: 100vh; /* Altura mínima de 100% da viewport */
+    padding: 20px; /* Espaçamento interno de 20px */
+    animation: fadeIn 0.8s ease-in; /* Animação de entrada suave */
+}
+
+/* ===== Section ===== */
+section {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    max-width: 900px; /* Largura máxima de 900px */
+    width: 100%; /* Largura total disponível até o máximo */
+}
+
+/* ===== Títulos ===== */
+h1 {
+    font-size: 3.5rem; /* Tamanho da fonte de 3.5 vezes o tamanho base */
+    font-weight: 700; /* Peso da fonte em negrito forte */
+    margin-bottom: 80px; /* Margem inferior de 80px */
+    letter-spacing: 2px; /* Espaçamento entre letras de 2px */
+    color: var(--netflix-light-gray); /* Cor do texto usando variável */
+}
+
+/* ===== Lista de Perfis ===== */
+.profiles {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: grid; /* Ativa o layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas responsivas com mínimo 200px */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* ===== Item do Perfil ===== */
+.profile {
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: var(--transition); /* Transição suave para todas as propriedades */
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--netflix-dark-gray); /* Cor do texto usando variável */
+}
+
+.profile:visited,
+.profile:link {
+    color: var(--netflix-dark-gray); /* Mantém a cor para links visitados e não visitados */
+}
+
+/* ===== Figure ===== */
+figure {
+    margin: 0; /* Remove margens padrão */
+    position: relative; /* Posicionamento relativo para elementos filhos */
+}
+
+/* ===== Imagem do Perfil ===== */
+.profile img {
+    width: 200px; /* Largura fixa de 200px */
+    height: 200px; /* Altura fixa de 200px */
+    border-radius: 8px; /* Bordas arredondadas de 8px */
+    object-fit: cover; /* Corta a imagem para preencher o espaço mantendo proporção */
+    border: 4px solid transparent; /* Borda transparente de 4px */
+    transition: var(--transition); /* Transição suave */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.profile:hover img {
+    border-color: var(--netflix-light-gray); /* Borda cinza clara no hover */
+}
+
+/* ===== Figcaption ===== */
+figcaption {
+    margin-top: 16px; /* Margem superior de 16px */
+    font-size: 1.25rem; /* Tamanho da fonte 1.25 vezes o base */
+    font-weight: 500; /* Peso da fonte médio */
+    letter-spacing: 0.5px; /* Espaçamento entre letras de 0.5px */
+    transition: var(--transition); /* Transição suave */
+}
+
+.profile:hover figcaption {
+    color: var(--netflix-light-gray); /* Cor do texto no hover */
+    font-weight: 700; /* Peso da fonte em negrito no hover */
+}
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+        transform: translateY(-20px); /* Começa 20px acima */
+    }
+    to {
+        opacity: 1; /* Termina totalmente visível */
+        transform: translateY(0); /* Termina na posição original */
+    }
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) { /* Para telas menores que 768px (tablets) */
+    h1 {
+        font-size: 2.5rem; /* Reduz o tamanho do título */
+        margin-bottom: 60px; /* Reduz a margem inferior */
+    }
+
+    .profiles {
+        gap: 30px; /* Espaçamento de 30px entre perfis */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Colunas menores */
+    }
+
+    .profile img {
+        width: 160px; /* Largura reduzida para 160px */
+        height: 160px; /* Altura reduzida para 160px */
+    }
+
+    figcaption {
+        font-size: 1rem; /* Tamanho da fonte reduzido */
+    }
+}
+
+@media (max-width: 480px) { /* Para telas menores que 480px (celulares) */
+    h1 {
+        font-size: 2rem; /* Título ainda menor */
+        margin-bottom: 40px; /* Margem ainda menor */
+    }
+
+    .profiles {
+        gap: 20px; /* Espaçamento reduzido para 20px */
+        grid-template-columns: repeat(2, 1fr); /* Sempre 2 colunas */
+    }
+
+    .profile img {
+        width: 120px; /* Largura de 120px para celulares */
+        height: 120px; /* Altura de 120px para celulares */
+    }
+
+    figcaption {
+        font-size: 0.9rem; /* Fonte ainda menor */
+        margin-top: 10px; /* Margem superior reduzida */
+    }
+}
+
+/* ===== Acessibilidade ===== */
+@media (prefers-reduced-motion: reduce) { /* Para usuários que preferem movimento reduzido */
+    * {
+        animation-duration: 0.01ms !important; /* Remove animações */
+        animation-iteration-count: 1 !important; /* Garante que animações não se repitam */
+        transition-duration: 0.01ms !important; /* Remove transições */
+    }
+}
