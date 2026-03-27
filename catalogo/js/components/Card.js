@@ -53,8 +53,8 @@ export function createCard(item) {
         </div>
         <div class="details-tags">
             <span>Empolgante</span>
-            <span>Animação</span>
-            <span>Ficção</span>
+            <span>Séries</span>
+            <span>Aventura</span>
         </div>
     `;
     card.appendChild(details);

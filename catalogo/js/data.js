@@ -1,6 +1,6 @@
 // Exporta as categorias de conteúdo para o catálogo
 export const categories = [
-    // Categoria de filmes épicos
+    // Categoria de filmes Breath of the Wild - Alanzoka
     {
         title: "Breath of the Wild - Alanzoka",
         items: [
