@@ -49,7 +49,7 @@ export const categories = [
     },
     // Categoria para séries
     {
-        title: "Séries",
+        title: "Tip 2 Tip China - Ludwig",
         items: [
             { img: "https://i.ytimg.com/vi/_41P6UrwQKY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC9a1L1EOWbiI1QGUdZFvTVOq4x5Q", top10: true, badge: "Episódio 1", badgeColor: "red",
             youtube: "https://www.youtube.com/watch?v=_41P6UrwQKY" },
