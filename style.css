@@ -3,6 +3,7 @@
     margin: 0; /* Remove todas as margens externas dos elementos */
     padding: 0; /* Remove todos os espaçamentos internos dos elementos */
     box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura total */
+    text-decoration: none; /* Remove sublinhado de links */
 }
 
 /* ===== Cores e Variáveis ===== */
@@ -10,7 +11,7 @@
     --netflix-black: #141414; /* Cor de fundo preta da Netflix */
     --netflix-red: #e50914; /* Cor vermelha característica da Netflix */
     --netflix-light-gray: #f5f5f1; /* Cinza claro para textos */
-    --netflix-dark-gray: #564d4d; /* Cinza escuro para elementos secundários */
+    --netflix-dark-gray: #808080; /* Cinza escuro para elementos secundários */
     --transition: all 0.3s ease; /* Transição suave de 0.3 segundos para todas as propriedades */
 }
 
@@ -18,8 +19,8 @@
 body {
     background-color: var(--netflix-black); /* Define o fundo preto da página */
     color: var(--netflix-light-gray); /* Cor padrão do texto */
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* Pilha de fontes moderna */
-    font-size: 3.5vw; /* Tamanho da fonte responsivo baseado na largura da viewport */
+    font-family: Arial, Helvetica, sans-serif; /* Pilha de fontes moderna */
+    font-size: 10px; /* Tamanho da fonte responsivo baseado na largura da viewport */
     line-height: 1.6; /* Altura da linha para melhor legibilidade */
     min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
 }
@@ -44,9 +45,9 @@ section {
 
 /* ===== Títulos ===== */
 h1 {
-    font-size: 3.5rem; /* Tamanho da fonte de 3.5 vezes o tamanho base */
-    font-weight: 700; /* Peso da fonte em negrito forte */
-    margin-bottom: 80px; /* Margem inferior de 80px */
+    font-size: 4rem; /* Tamanho da fonte de 3.5 vezes o tamanho base */
+    font-weight: 520; /* Peso da fonte em negrito forte */
+    margin-bottom: 29px; /* Margem inferior de 29px */
     letter-spacing: 2px; /* Espaçamento entre letras de 2px */
     color: var(--netflix-light-gray); /* Cor do texto usando variável */
 }
@@ -146,6 +147,26 @@ figcaption {
 .profile:hover figcaption {
     color: var(--netflix-light-gray); /* Cor do texto no hover */
     font-weight: 700; /* Peso da fonte em negrito no hover */
+}
+
+/* ===== Botão de Gerenciar Perfis ===== */
+.profile-button{
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid var(--netflix-dark-gray); /* Borda cinza de 1px */
+    color: var(--netflix-dark-gray); /* Cor cinza */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    display:inline-block; /* Exibe como bloco para ocupar toda a largura disponível */
+    font-size: 1.2vw; /* Tamanho da fonte baseado na largura da tela */
+    letter-spacing: 2px; /* Espaçamento entre letras de 2px */
+    margin: 2em 0 1em; /* Margens de 2em em cima e 1em em baixo */
+    padding: 7px 35px; /* Preenchimento de 7px em cima e 35px em baixo */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    margin-top: 100px; /* Margem superior de 30px */
+}
+
+.profile-button:hover {
+    border-color: var(--netflix-light-gray); /* Borda cinza ao passar o mouse */
+    color: var(--netflix-light-gray); /* Cor branca ao passar o mouse */
 }
 
 /* ===== Animações ===== */
